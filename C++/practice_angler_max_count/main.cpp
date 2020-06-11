@@ -6,9 +6,7 @@
 #include "../library/maxsearch.hpp"
 #include "../library/counting.hpp"
 
-
-
- using namespace std;
+using namespace std;
 
 //Ide jön a végeredmény
 struct Horgasz
@@ -38,8 +36,11 @@ ostream& operator<<(ostream& inp, const Szamol &s)
 class CuntHal : public Counting<Szamol>
 {
 protected:
-    void first() override {};
-    bool cond(const Szamol &e) const override {cout << e << endl;return true;};
+    bool cond(const Szamol &e) const override
+    {
+//        cout << e << endl;
+        return true;
+    };
 };
 
 //Beolvasás
